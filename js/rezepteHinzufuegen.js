@@ -18,7 +18,7 @@ function addElementsByArray(arr, id, cssClass){
     function rezeptAnzeigen(key){
         console.log(key);
         localStorage.setItem("selected", key);
-        window.location = 'html/rezept.html';
+        window.location = './rezept.html';
     };
 }
 
