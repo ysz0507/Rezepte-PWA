@@ -26,6 +26,7 @@ function rezeptLöschen(name){
     var rezepte = JSON.parse(localStorage.getItem("Keys") || "[]");
     if(rezepte.indexOf(name) == -1)
         return;
+    console.log("Es wurde wirklich: " + name + " gelöscht");
     rezepte.splice(rezepte.indexOf(name), 1);
     localStorage.setItem("Keys", JSON.stringify(rezepte));
     localStorage.removeItem(name);
