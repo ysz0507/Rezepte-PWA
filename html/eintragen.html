@@ -41,7 +41,6 @@
                 return;
             }
             if(selected !== ""){
-                console.log("Es wurde " + selected + " gelöscht");
                 rezeptLöschen(selected);
                 keys = JSON.parse(localStorage.getItem("Keys") || "[]");
             }
@@ -50,7 +49,6 @@
             localStorage.setItem("Keys", JSON.stringify(keys));
             
             localStorage.setItem(key, value);
-            console.log(key + " gespeichert");
             window.location = './uebersicht.html'
         }
         var name = localStorage.getItem("selected");
