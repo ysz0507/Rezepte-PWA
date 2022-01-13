@@ -2,21 +2,21 @@ console.log('I am a Service Worker!');
 
 var cacheName = 'CacheFor PWA';
 var filesToCache = [
-  '/',
-  '/index.html',
-  '/html/eintragen.html',
-  '/html/rezept.html',
-  '/html/settings.html',
-  '/html/suche.html',
-  '/html/uebersicht.html',
-  '/css/main.css',
-  '/css/units.css',
-  '/js/main.js',
-  '/js/rezepteHinzufuegen.js',
-  '/images/cross.png',
-  '/images/gear.png',
-  '/images/search.png',
-  '/images/stack.png'
+  './',
+  './index.html',
+  './html/eintragen.html',
+  './html/rezept.html',
+  './html/settings.html',
+  './html/suche.html',
+  './html/uebersicht.html',
+  './css/main.css',
+  './css/units.css',
+  './js/main.js',
+  './js/rezepteHinzufuegen.js',
+  './images/cross.png',
+  './images/gear.png',
+  './images/search.png',
+  './images/stack.png'
 ];
 
 /* Start the service worker and cache all of the app's content */
