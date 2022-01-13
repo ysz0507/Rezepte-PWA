@@ -27,11 +27,13 @@
             let validName = true;
             keys.forEach(recipe => {
                 if (recipe.toLowerCase() === key.toLowerCase()){
-                    validName = false;
-                    return;
+                    if(key !== selected){
+                        validName = false;
+                        return;
+                    }
                 }
             });
-            if(key.toLowerCase() === "keys" || key.toLowerCase() === "selected" || key === ""){
+            if(key.toLowerCase() === "keys" || key === ""){
                 validName = false;
             }
             if (!validName){
