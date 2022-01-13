@@ -41,7 +41,8 @@
                 return;
             }
             if(selected !== ""){
-                rezeptLöschen(localStorage.getItem("selected"));
+                console.log("Es wurde " + selected + " gelöscht");
+                rezeptLöschen(selected);
             }
 
             keys.push(key);
