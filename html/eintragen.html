@@ -47,7 +47,7 @@
             }
 
             keys.push(key);
-            localStorage.setItem("Keys", keys);
+            localStorage.setItem("Keys", JSON.stringify(keys));
             
             localStorage.setItem(key, value);
             console.log(key + " gespeichert");
