@@ -18,11 +18,11 @@
     function löschen() {
         if(confirm("Wirklich löschen?")){
             rezeptLöschen(localStorage.getItem("selected"));
-            window.location = "/html/uebersicht.html";
+            window.location = "uebersicht.html";
         }
     }
     function edit() {
-        window.location = "/html/eintragen.html";
+        window.location = "eintragen.html";
     }
     var name = localStorage.getItem("selected");
     document.getElementById("Name").appendChild(document.createTextNode(name));
