@@ -43,10 +43,11 @@
             if(selected !== ""){
                 console.log("Es wurde " + selected + " gelöscht");
                 rezeptLöschen(selected);
+                keys = JSON.parse(localStorage.getItem("Keys") || "[]");
             }
 
             keys.push(key);
-            localStorage.setItem("Keys", JSON.stringify(keys));
+            localStorage.setItem("Keys", );
             
             localStorage.setItem(key, value);
             console.log(key + " gespeichert");
