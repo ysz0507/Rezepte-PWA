@@ -1,0 +1,44 @@
+
+body {
+    font-family: sans-serif;
+  }
+  
+  html,
+  .fullscreen {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    align-items: center;
+  }
+  
+  .content {
+    border: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+  .icon {
+    padding: 6px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .navigation {
+    margin: auto;
+    width: 100%;
+    background-color: #bebebe;
+  }
+  .navButton:active {
+      background-color: #d0d0d0;
+      box-shadow: 0 5px #666;
+      transform: translateY(6px);
+    }
+  

@@ -1,0 +1,30 @@
+<head>
+    <link rel="stylesheet" href="/css/units.css">
+    <script src="/js/rezepteHinzufuegen.js"></script>
+</head>
+<body>
+    <div class="element">
+        <h1 style="text-align: center; padding-bottom: 15; padding-top: 25;" id="Name"></h1>
+
+        <p id="Rezept"></p>
+        <div>
+            <button style="width: 49%;" onclick="edit();">Edit</button>
+            <button style="width: 49%;" onclick="löschen();">Delete</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    function löschen() {
+        if(confirm("Wirklich löschen?")){
+            rezeptLöschen(localStorage.getItem("selected"));
+            window.location = "/html/uebersicht.html";
+        }
+    }
+    function edit() {
+        window.location = "/html/eintragen.html";
+    }
+    var name = localStorage.getItem("selected");
+    document.getElementById("Name").appendChild(document.createTextNode(name));
+    document.getElementById("Rezept").appendChild(document.createTextNode(localStorage.getItem(name)));
+</script>

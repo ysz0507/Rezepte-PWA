@@ -1,0 +1,31 @@
+<head>
+    <link rel="stylesheet" href="/css/units.css">
+    <script src="/js/rezepteHinzufuegen.js"></script>
+</head>
+<body>
+    <div>
+        <h1 class="element">Rezept suchen</h1>
+        <input class = "element" type="text" value="neues Rezept", id="name">
+        <br>
+        <button class="element" onclick="suche(document.getElementById('name').value)">Suchen</button>
+        <br>
+        <table id="Rezepte", class="tabelle"></table>
+    </div>
+    
+
+    <script>
+        function suche(value){
+            var table = document.getElementById("Rezepte")
+            table.childNodes.forEach(function (child){
+                table.removeChild(child);
+            });
+            
+            var names = JSON.parse(localStorage.getItem("Keys") || "[]");;
+            value = value.toLowerCase();
+            names = names.filter(function(recipe, index, arr){ 
+                return recipe.toLowerCase().includes(value);
+            });
+            addElementsByArray(names, "Rezepte", "rezept");
+        }
+    </script>
+</body>

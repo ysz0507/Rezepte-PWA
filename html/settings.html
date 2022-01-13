@@ -1,0 +1,78 @@
+<head>
+    <link rel="stylesheet" href="/css/units.css">
+</head>
+<body>
+    <h1>Settings</h1>
+    <div class="element">
+        <p>
+            Dieses Projekt ist lizensiert unter einer 
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons License</a> - 
+            developed by Yves-Simon Zeulner
+        </p>
+        <p style="font-size: 30;">
+            Sources:
+        </p>
+        <ul style="text-align: left;">
+            <li><a href="https://iconscout.com/icon/layers-1767829" target='_blank'>
+                <p>Stack Icon</p>
+            </a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Search_Icon.png" target='_blank'>
+                <p>Search Icon</p>
+            </a></li>
+            <li><a href="https://pixabay.com/vectors/settings-gears-options-transmission-481826/" target='_blank'>
+                <p>Gears Icon</p>
+            </a></li>
+            <li><a href="https://publicdomainvectors.org/de/kostenlose-vektorgrafiken/Plus-und-minus/61572.html" target='_blank'>
+                <p>Cross Sign</p>
+            </a></li>
+            <li><a href="https://freesvg.org/icon-book" target='_blank'>
+                <p>PWA Icon</p>
+            </a></li>
+        </ul>
+    </div>
+    <button class="element" onclick="löschen()">Werkseinstellungen wiederherstellen</button>
+    </br>
+    <button class="element" onclick="createBackup()">Backup erstellen</button>
+    </br>
+    <button class="element" onclick="loadBackup()">Alles löschen und Backup laden</button>
+    </br>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target='_blank'>
+        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+    </a><br />
+    This 
+    <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" rel="dct:type">work</span>
+    by 
+    <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Yves-Simon Zeulner</span> 
+    is licensed under a 
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target='_blank'>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+    <script>
+        function löschen() {
+            var anwser = prompt("Wenn du dir sicher bist, dann bestätige mit: \"Alles löschen\"", "Zurück");
+            console.log(anwser);
+            if(anwser === "Alles löschen"){
+                localStorage.clear();
+                alert("Es wurde alles gelöscht!")
+            }
+        }
+        function createBackup() {
+            var keys = JSON.parse(localStorage.getItem("Keys") || "[]");
+            var backup = [];
+            keys.forEach(key => {
+                backup.push(key);
+                backup.push(localStorage.getItem(key));
+            });
+            console.log(JSON.stringify(backup));
+            navigator.clipboard.writeText(JSON.stringify(backup));
+        }
+        function loadBackup() {
+            var backup = JSON.parse(prompt("Füge hier das Backup ein:", ""));
+            var keys = [];
+            localStorage.clear();
+            for (let i = 0; i < backup.length; i+=2) { 
+                keys.push(backup[i]);
+                localStorage.setItem(backup[i], backup[i+1]);
+            }
+            localStorage.setItem("Keys", JSON.stringify(keys));
+        }
+    </script>
+</body>

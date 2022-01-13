@@ -1,0 +1,70 @@
+
+.element {
+    margin: auto;
+    padding: 10;
+    text-align: center;
+    width: 90%;
+    display: block;
+}
+
+.tabelle {
+    margin: auto;
+    width: 97%;
+    border-spacing: 0px 20px;
+}
+
+.rezept {
+    background-color: #dedede;
+    box-shadow: rgb(60 64 67 / 30%) 0 1px 3px 0, rgb(60 64 67 / 15%) 0 4px 8px 3px;
+    padding: 30px;
+    font-size:20px;
+}
+
+.rezept:active {
+    background-color: #d0d0d0;
+    box-shadow: 5px 5px #666;
+    transform: translateY(6px);
+}
+
+h1 {
+    font-size: 50;
+    text-align: center;
+    font-family: fantasy;
+    padding: 30;
+    margin: 0;
+}
+
+p {
+    text-align: left;
+    font-size: 20;
+    font-family: fantasy;
+}
+
+button {
+    box-shadow: rgb(60 64 67 / 30%) 0 1px 3px 0, rgb(60 64 67 / 15%) 0 4px 8px 3px;
+    background-color: #f0f0f0;
+    height: 60;
+    font-size:20px;
+}
+
+button:active {
+    background-color: #d0d0d0;
+    box-shadow: 0 5px #666;
+    transform: translateY(6px);
+  }
+
+input {
+    border-width: 0;
+    font-family: fantasy;
+    font-size:20px;
+}
+textarea {
+    border-width: 0;
+    resize: none;
+    flex-grow: 1;
+    font-family: fantasy;
+    font-size:20px;
+}
+body {
+    font-family: fantasy;
+}

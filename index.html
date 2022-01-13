@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="white"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />  
+    <link rel="apple-touch-icon" href="symbol/152.png"> 
+    <meta name="apple-mobile-web-app-capable" content="yes">  
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+    <meta name="apple-mobile-web-app-title" content="Hello World"> 
+    <meta name="msapplication-TileImage" content="symbol/144.png">  
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+</head>
+<body class="fullscreen">
+    <iframe class="content" id="frame" src="html/uebersicht.html"></iframe>
+    
+    <nav style="width: 100%;">
+        <table class="navigation"><tr>
+            <td class="navButton" style="text-align: center;" onclick="document.getElementById('frame').src = 'html/uebersicht.html'">
+                <img src="images/stack.png" alt="Übersicht" class="icon">
+            </td>
+            <td class="navButton" style="text-align: center;" onclick="document.getElementById('frame').src = 'html/suche.html'">
+                <img src="images/search.png" alt="Suche" class="icon">
+            </td>
+            <td class="navButton" style="text-align: center;" onclick="document.getElementById('frame').src = 'html/settings.html'">
+                <img src="images/gear.png" alt="Einstellungen" class="icon">
+            </td>
+        </tr></table>
+    </nav>
+    
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<head>
+    <link rel="stylesheet" href="/css/units.css">
+    <script src="/js/rezepteHinzufuegen.js"></script>
+</head>
+<body>
+    <div style="width:100%; height:100%; 
+    display: flex;
+    flex-direction: column;">
+
+        </br>
+        <h1 class="element">Rezept hinzufügen</h1>
+        <input class = "element" type="text" value="neues Rezept", id="name">
+        <br>
+        <textarea class = "element" type="text", id="schrittfolge" rows="20"></textarea>
+        <br>
+        <div style="justify-content: flex-end; display: flex;">
+            <button class="element" onclick="add(document.getElementById('name').value, document.getElementById('schrittfolge').value)">Speichern</button>
+        </div>
+        </br>
+        
+    </div>
+
+    <script>
+        function add(key, value){
+            let selected = localStorage.getItem("selected");
+            let keys = JSON.parse(localStorage.getItem("Keys") || "[]");
+            let validName = true;
+            keys.forEach(recipe => {
+                if (recipe.toLowerCase() === key.toLowerCase()){
+                    validName = false;
+                    return;
+                }
+            });
+            if(key.toLowerCase() === "keys" || key.toLowerCase() === "selected" || key === ""){
+                validName = false;
+            }
+            if (!validName){
+                alert("Dieser Name ist ungültig! Wähle einen anderen");
+                return;
+            }
+            if(selected !== ""){
+                rezeptLöschen(localStorage.getItem("selected"));
+            }
+
+            keys.push(key);
+            localStorage.setItem("Keys", JSON.stringify(keys));
+            
+            localStorage.setItem(key, value);
+            console.log(key + " gespeichert");
+            window.location = '/html/uebersicht.html'
+        }
+        var name = localStorage.getItem("selected");
+        if (name === ""){
+            document.getElementById("schrittfolge").appendChild(document.createTextNode("Rezeptanweisungen"));
+        } else {
+            document.getElementById("name").value = name;
+            document.getElementById("schrittfolge").appendChild(document.createTextNode(localStorage.getItem(name)));
+        }
+    </script>
+</body>
