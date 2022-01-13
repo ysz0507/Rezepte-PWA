@@ -31,5 +31,5 @@ function rezeptLöschen(name){
     localStorage.setItem("Keys", JSON.stringify(rezepte));
     localStorage.removeItem(name);
     console.log(JSON.stringify(rezepte) + "nach der löschung");
-    localStorage.setItem("teset", "heyyy");
+    localStorage.setItem("teset", JSON.stringify(rezepte));
 }
