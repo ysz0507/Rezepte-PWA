@@ -30,4 +30,5 @@ function rezeptLöschen(name){
     rezepte.splice(rezepte.indexOf(name), 1);
     localStorage.setItem("Keys", JSON.stringify(rezepte));
     localStorage.removeItem(name);
+    console.log(JSON.stringify(rezepte) + "nach der löschung");
 }
