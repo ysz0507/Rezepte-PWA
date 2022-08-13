@@ -1,9 +1,14 @@
 # Rezepte-PWA
 
+## link for access: 
+https://ysz0507.github.io/Rezepte-PWA/index.html
+
 It's just a little PWA to save information ordered by a keyword.
 Originally, it was built to save your most liked recipes. Just click it and get the information.
 Some possible uses: cookbook, page and ingredients you will need. You could also store some of the knowledge you earned. For example: It's enough for 5 people instead of 4, or it takes about 10 min longer to cook.
 Of course you can also save whatever you want.
+
+<img src="example.png" width="30%">
 
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target='_blank'>
