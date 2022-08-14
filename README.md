@@ -4,11 +4,19 @@
 https://ysz0507.github.io/Rezepte-PWA/index.html
 
 It's just a little PWA to save information ordered by a keyword.
-Originally, it was built to save your most liked recipes. Just click it and get the information.
-Some possible uses: cookbook, page and ingredients you will need. You could also store some of the knowledge you earned. For example: It's enough for 5 people instead of 4, or it takes about 10 min longer to cook.
-Of course you can also save whatever you want.
+Originally it was built to save your most liked recipes. Just click it and get the information.
+Some other possible uses are:
+<ul>
+  <li>cookbook - save page and ingredients of recipes you like</li>
+  <li>notepad - store some of the knowledge you earned</li>
+  <li>bookshelve - save the names of the books that were recommended to you</li>
+  <li>wishlist - save the ideas of the best presents for someone or for yourself</li>
+  <li>walking - save your favourite routes</li>
+  <li>and anything you can think of</li>
+</ul>
+But <b>don't</b> use it to save you passwords! It is <b>not</b> encrypted!
 
-<img src="example.png" width="30%">
+<img src="example.png" width="30%" style="margin: 15px">
 
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target='_blank'>
